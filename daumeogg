@@ -1,6 +1,39 @@
-while task.wait () do
+local args = {
+	workspace:WaitForChild("Base1"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
 local args = {
 	workspace:WaitForChild("Base2"):WaitForChild("Eggs"):WaitForChild("Egg3")
 }
 game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-end
+
+local args = {
+	workspace:WaitForChild("Base3"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
+local args = {
+	workspace:WaitForChild("Base4"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
+local args = {
+	workspace:WaitForChild("Base5"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
+local args = {
+	workspace:WaitForChild("Base6"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
+local args = {
+	workspace:WaitForChild("Base7"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+
+local args = {
+	workspace:WaitForChild("Base8"):WaitForChild("Eggs"):WaitForChild("Egg3")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
