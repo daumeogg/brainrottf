@@ -1,41 +1,227 @@
-while task.wait () do
-local args = {
-	workspace:WaitForChild("Base1"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base2"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base3"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base4"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base5"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base6"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base7"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
-
-local args = {
-	workspace:WaitForChild("Base8"):WaitForChild("Eggs"):WaitForChild("Egg3")
-}
-game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("HatchServer"):InvokeServer(unpack(args))
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "SimpleUI"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ 
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 300, 0, 500)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -150)
+mainFrame.BackgroundColor3 = Color3.fromRGB(25, 45, 35)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true -- Needed for dragging
+mainFrame.Draggable = true -- Make it draggable!
+mainFrame.Parent = screenGui
+ 
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 50)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.BackgroundTransparency = 1
+title.Text = "Script by Dau meo "
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 30
+title.TextColor3 = Color3.fromRGB(332, 555, 712)
+title.Parent = mainFrame
+ 
+local function createButton(name, yPos, callback)
+	local button = Instance.new("TextButton")
+	button.Size = UDim2.new(0.8, 0, 0, 30)
+	button.Position = UDim2.new(0.1, 0, 0, yPos)
+	button.BackgroundColor3 = Color3.fromRGB(70, 70, 82)
+	button.BorderSizePixel = 0
+	button.Text = name
+	button.Font = Enum.Font.SourceSans
+	button.TextSize = 24
+	button.TextColor3 = Color3.fromRGB(295, 455, 125)
+	button.Parent = mainFrame
+ 
+	button.MouseButton1Click:Connect(callback)
 end
+ 
+createButton("Inf Coins", 60, function()
+local args = {
+	"Cash",
+	99999999999999999999999999999999999999999999999999999
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("AddValueEvent"):FireServer(unpack(args))
+end)
+createButton("Inf Gems", 110, function()
+	local args = {
+	9999999999999999999999999999999999999999999999999999999
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("GemEvent"):FireServer(unpack(args))
+end)
+
+createButton("Give BrainRot & All Rewards", 160, function()
+ local args = {
+	1
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	2
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	5
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	6
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	7
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	8
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	9
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+local args = {
+	10
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+ end)
+ 
+ createButton("Raining Tacos Events[fix Patched]", 210, function()
+ for i,v in next, workspace:GetDescendants() do
+       if v:IsA"Part" or v:IsA"UnionOperation" or v:IsA"MeshPart" then
+           v.Color = Color3.fromRGB(85,255,0)
+       end
+   end
+   for i,v in next, workspace:GetDescendants() do
+       if v.Name == "Clothing" then
+           v.Color3 = Color3.fromRGB(85,288,99)
+       end
+   end
+local msg2 = Instance.new("Hint",workspace) msg2.Text = "RAINING TACOS STARTING!!!!" imageOne = "http://www.roblox.com/asset/?id=846297342" imageTwo = "http://www.roblox.com/asset/?id=846297342" imageThree = "http://www.roblox.com/asset/?id=846297342" imageFour = "http://www.roblox.com/asset/?id=846297342" imageFive = "http://www.roblox.com/asset/?id=846297342" imageSix = "http://www.roblox.com/asset/?id=846297342" imageSeven = "http://www.roblox.com/asset/?id=846297342" imageEight = "http://www.roblox.com/asset/?id=846297342" Spooky = Instance.new("Sound", game.Workspace) Spooky.Name = "Tacos" Spooky.SoundId = "rbxassetid://142376088" Spooky.Volume = 10 Spooky.Looped = true Spooky:Play() Sky = Instance.new("Sky", game.Lighting) Sky.SkyboxBk = imageOne Sky.SkyboxDn = imageOne Sky.SkyboxFt = imageOne Sky.SkyboxLf = imageOne Sky.SkyboxRt = imageOne Sky.SkyboxUp = imageOne while true do Sky.SkyboxBk = imageOne Sky.SkyboxDn = imageOne Sky.SkyboxFt = imageOne Sky.SkyboxLf = imageOne Sky.SkyboxRt = imageOne Sky.SkyboxUp = imageOne wait(0.25) Sky.SkyboxBk = imageTwo Sky.SkyboxDn = imageTwo Sky.SkyboxFt = imageTwo Sky.SkyboxLf = imageTwo Sky.SkyboxRt = imageTwo Sky.SkyboxUp = imageTwo wait(0.25) Sky.SkyboxBk = imageThree Sky.SkyboxDn = imageThree Sky.SkyboxFt = imageThree Sky.SkyboxLf = imageThree Sky.SkyboxRt = imageThree Sky.SkyboxUp = imageThree wait(0.25) Sky.SkyboxBk = imageFour Sky.SkyboxDn = imageFour Sky.SkyboxFt = imageFour Sky.SkyboxLf = imageFour Sky.SkyboxRt = imageFour Sky.SkyboxUp = imageFour wait(0.25) Sky.SkyboxBk = imageFive Sky.SkyboxDn = imageFive Sky.SkyboxFt = imageFive Sky.SkyboxLf = imageFive Sky.SkyboxRt = imageFive Sky.SkyboxUp = imageFive wait(0.25) Sky.SkyboxBk = imageSix Sky.SkyboxDn = imageSix Sky.SkyboxFt = imageSix Sky.SkyboxLf = imageSix Sky.SkyboxRt = imageSix Sky.SkyboxUp = imageSix wait(0.25) Sky.SkyboxBk = imageSeven Sky.SkyboxDn = imageSeven Sky.SkyboxFt = imageSeven Sky.SkyboxLf = imageSeven Sky.SkyboxRt = imageSeven Sky.SkyboxUp = imageSeven wait(0.25) Sky.SkyboxBk = imageEight Sky.SkyboxDn = imageEight Sky.SkyboxFt = imageEight Sky.SkyboxLf = imageEight Sky.SkyboxRt = imageEight Sky.SkyboxUp = imageEight wait(0.25) end 
+ --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+end)
+ 
+ createButton("Give Spins", 260, function()
+ local args = {
+	3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpinWheelPrizeEvent"):FireServer(unpack(args))
+ end)
+ 
+ createButton("Get All Pets&Pets Slots", 310, function()
+local args = {
+	"MaxPets",
+	10000000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MultiplierEvent"):FireServer(unpack(args))
+
+local args = {
+	"PetInventorySize",
+	10000000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("MultiplierEvent"):FireServer(unpack(args))
+end)
+
+
+createButton("Get Pet Limited", 370, function()
+local args = {
+	"Chimpanzini Bananini",
+	"1750337325_3884"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("EquipPet"):InvokeServer(unpack(args))
+local args = {
+	"Tralalero Tralala",
+	"1750337325_3884"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("EquipPet"):InvokeServer(unpack(args))
+local args = {
+	"Udin Din Din Dun",
+	"1750337325_3884"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("PetRemotes"):WaitForChild("EquipPet"):InvokeServer(unpack(args))
+end)
+
+createButton("Give All Trains", 450, function()
+local args = {
+	"Red",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Blue",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Yellow",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Green",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Purple",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Pink",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"White",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Black",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Fire",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Neon",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Rainbow",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+
+local args = {
+	"Aurora",
+	25000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("BuyTrailEvent"):FireServer(unpack(args))
+end)
+
